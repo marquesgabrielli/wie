@@ -1,0 +1,37 @@
+body{
+    background-color: black;
+}
+/* define o container principal com uma altura fixa em pixels */
+.page-container{
+    display: flex;
+    justify-content: center; /*centraliza horizontalmente */
+    align-items: center; /* centraliza verticalmente */
+    height: 600px; /* altura fixa em pixels */
+    border: 1px solid darkred; /* linha opcional para enxergar os limites da página */
+}
+/* estiliza o conteudo interno - a imagem e o texto */
+.content-wrapper{
+    text-align: center;
+    max-width: 450px;
+    margin: 0 auto;
+}
+img{
+    width: 300px;
+    height: auto;
+}
+a{
+    color: red;
+    text-decoration: none;
+    text-decoration-line: none;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+a:hover{
+    color: darkred;
+    font-size: 0;
+    transform: scale(1.50) !important;
+}
+a:hover::after{
+    content: attr(data-hover);
+    font-size: 16px;
+}
